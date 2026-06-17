@@ -1,0 +1,70 @@
+{
+    "name": "Ceylon Canary Tours - Premium Sri Lanka Travel Experiences",
+    "short_name": "Ceylon Canary Tours",
+    "description": "Discover authentic Sri Lanka with customizable multi-day tours, expert guides, and unforgettable island experiences",
+    "start_url": "/index.html",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#ffffff",
+    "theme_color": "#1e3a8a",
+    "categories": ["travel", "tourism", "tours"],
+    "icons": [
+        {
+            "src": "/images/logo.jpg",
+            "sizes": "any",
+            "type": "image/jpeg",
+            "purpose": "any"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "https://res.cloudinary.com/djsspfywo/image/upload/q_auto/f_auto/v1778001720/639841-1920x1080-desktop-1080p-sri-lanka-wallpaper-photo_xgudjp.jpg",
+            "sizes": "1920x1080",
+            "type": "image/jpeg",
+            "form_factor": "wide"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Explore Packages",
+            "short_name": "Packages",
+            "description": "Browse our curated travel modules",
+            "url": "/index.html#packages",
+            "icons": [
+                {
+                    "src": "/images/logo.jpg",
+                    "sizes": "96x96",
+                    "type": "image/jpeg"
+                }
+            ]
+        },
+        {
+            "name": "Gallery",
+            "short_name": "Gallery",
+            "description": "View travel photos and memories",
+            "url": "/gallery.html",
+            "icons": [
+                {
+                    "src": "/images/logo.jpg",
+                    "sizes": "96x96",
+                    "type": "image/jpeg"
+                }
+            ]
+        },
+        {
+            "name": "Book Now",
+            "short_name": "Book",
+            "description": "Book your Sri Lanka tour",
+            "url": "/booking.html",
+            "icons": [
+                {
+                    "src": "/images/logo.jpg",
+                    "sizes": "96x96",
+                    "type": "image/jpeg"
+                }
+            ]
+        }
+    ],
+    "prefer_related_applications": false
+}

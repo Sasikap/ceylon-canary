@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="language" content="English">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Title & Description -->
+    <title>Book Your Sri Lanka Tour | Custom Itineraries - Ceylon Canary Tours</title>
+    <meta name="description" content="Complete your Sri Lanka tour booking with Ceylon Canary Tours. Review your customized itinerary, select accommodations, and secure your adventure today.">
+    <meta name="keywords" content="book Sri Lanka tour, tour booking, Ceylon Canary booking, custom itinerary booking, Sri Lanka vacation booking, travel reservation">
+    <meta name="author" content="Ceylon Canary Tours">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ceyloncanary.com/booking.html">
+    <meta property="og:title" content="Book Your Sri Lanka Tour | Ceylon Canary Tours">
+    <meta property="og:description" content="Complete your custom Sri Lanka tour booking with our secure reservation system.">
+    <meta property="og:site_name" content="Ceylon Canary Tours">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://ceyloncanary.com/booking.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JSON-LD Schema for Booking Page -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://ceyloncanary.com/booking.html",
+        "name": "Book Your Sri Lanka Tour",
+        "description": "Secure your custom Sri Lanka tour reservation with Ceylon Canary Tours",
+        "url": "https://ceyloncanary.com/booking.html",
+        "isPartOf": {
+            "@id": "https://ceyloncanary.com"
+        }
+    }
+    </script>
+    <style>
+        .booking-page {
+            padding-top: 120px;
+            background: var(--light);
+            min-height: 100vh;
+            padding-bottom: 5rem;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+        .back-btn:hover {
+            color: var(--secondary);
+            transform: translateX(-5px);
+        }
+        .review-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+        }
+        @media (max-width: 992px) {
+            .review-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .booking-page {
+                padding-top: 100px;
+            }
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 480px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .booking-form, .itinerary {
+                padding: 2rem !important;
+            }
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Ceylon Canary Tours">
+                <span>Ceylon Canary Tours</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#packages">Destinations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="index.html#contact" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Need Help?</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="booking-page">
+        <div class="container">
+            <a href="index.html#packages" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Destinations</a>
+            
+            <div class="section-header" style="text-align: left; margin-bottom: 3rem;">
+                <h2>Your Custom Odyssey</h2>
+                <p>Finalize the details of your dream Sri Lankan adventure</p>
+            </div>
+            
+            <div class="review-grid">
+                <div id="itinerary" class="itinerary" style="background: var(--white); padding: 3.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                    <!-- Populated by JS -->
+                </div>
+
+                <div class="booking-form" style="background: var(--white); padding: 3.5rem; border-radius: var(--radius-lg); border: 1px solid #f1f5f9; box-shadow: var(--shadow-lg); height: fit-content;">
+                    <h3 style="margin-bottom: 2rem; font-family: 'Playfair Display', serif; font-size: 1.8rem;">Complete Your Inquiry</h3>
+                    <form id="bookingForm" onsubmit="submitBooking(event)">
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Full Name</label>
+                            <input type="text" id="name" required style="width: 100%; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid #e2e8f0;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address</label>
+                            <input type="email" id="email" required style="width: 100%; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid #e2e8f0;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Phone / WhatsApp Number</label>
+                            <input type="tel" id="phone" required placeholder="e.g. +1 (555) 019-2834" style="width: 100%; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid #e2e8f0;">
+                        </div>
+                        <div class="form-row" style="margin-bottom: 1.5rem;">
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Travelers</label>
+                                <input type="number" id="travelers" min="1" required style="width: 100%; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid #e2e8f0;">
+                            </div>
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Start Date</label>
+                                <input type="date" id="startDate" required style="width: 100%; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid #e2e8f0;">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 2rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Special Requests</label>
+                            <textarea id="specialRequests" rows="4" style="width: 100%; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid #e2e8f0;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Request to Agent</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ceylon Canary Tours. All rights reserved. | Developed by UIXEL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/booking.js"></script>
+</body>
+</html>

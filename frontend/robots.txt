@@ -1,0 +1,31 @@
+# Ceylon Canary Tours - robots.txt
+# Allow search engines to crawl and index all content
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /gallery.html
+Allow: /booking.html
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+Disallow: /backend/
+Disallow: /uploads/
+Disallow: /.env
+Disallow: /node_modules/
+
+# Specific crawl-delay to be respectful to server
+Crawl-delay: 2
+
+# Sitemaps
+Sitemap: https://ceyloncanary.com/sitemap.xml
+
+# Allow popular search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2

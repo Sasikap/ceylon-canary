@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- SEO Title & Description -->
+    <title>Sri Lanka Photography Chronicles & Gallery | Ceylon Canary Tours - Travel Memories</title>
+    <meta name="description" content="Explore Sri Lanka through stunning photography. Wildlife, beaches, cultural heritage, and travel moments captured by Ceylon Canary Tours travelers. Upload your own travel photos to our gallery.">
+    <meta name="keywords" content="Sri Lanka gallery, travel photography, Ceylon Canary tours photos, Sri Lanka wildlife, cultural heritage photos, beach photography, upload travel photos, tourism experience">
+    <meta name="author" content="Ceylon Canary Tours">
+    <meta name="creator" content="Ceylon Canary Tours">
+
+    <!-- Open Graph Tags (Social Media) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ceyloncanary.com/gallery.html">
+    <meta property="og:title" content="Sri Lanka Photography Chronicles | Ceylon Canary Tours">
+    <meta property="og:description" content="Explore stunning photography from Sri Lanka - wildlife, cultural heritage, beaches, and traveler experiences. Share your own travel memories with our community.">
+    <meta property="og:site_name" content="Ceylon Canary Tours">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ceyloncanary.com/gallery.html">
+    <meta name="twitter:title" content="Sri Lanka Travel Photo Gallery | Ceylon Canary Tours">
+    <meta name="twitter:description" content="Discover beautiful Sri Lanka through our photography gallery. Wildlife, heritage, beaches, and traveler-uploaded photos from authentic experiences.">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://ceyloncanary.com/gallery.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JSON-LD Structured Data for Gallery Page -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://ceyloncanary.com/gallery.html",
+        "name": "Sri Lanka Photography Chronicles",
+        "description": "Explore stunning Sri Lanka photography gallery featuring wildlife, cultural heritage, beaches, and traveler experiences",
+        "url": "https://ceyloncanary.com/gallery.html",
+        "isPartOf": {
+            "@id": "https://ceyloncanary.com"
+        },
+        "inLanguage": "en-US"
+    }
+    </script>
+
+    <!-- Organization Schema Reference -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ceylon Canary Tours",
+        "url": "https://ceyloncanary.com",
+        "logo": "https://ceyloncanary.com/images/logo.jpg"
+    }
+    </script>
+    
+    <style>
+        /* Dedicated Gallery Page Styles */
+        .gallery-header-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-header-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1705936981588-a4192f66fcfb?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            mix-blend-mode: overlay;
+        }
+        
+        .gallery-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .gallery-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Control Panel Styles */
+        .gallery-controls {
+            background: var(--white);
+            padding: 2rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 70px;
+            z-index: 99;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        
+        .controls-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .search-box {
+            position: relative;
+            flex: 1;
+            max-width: 350px;
+            min-width: 250px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem 1rem 0.8rem 2.8rem;
+            border: 1px solid #cbd5e1;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        
+        .search-box input:focus {
+            border-color: var(--secondary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+        }
+        
+        .search-box i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        
+        .filter-chips {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-chip {
+            padding: 0.6rem 1.2rem;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text);
+        }
+        
+        .filter-chip:hover {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+        
+        .filter-chip.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        
+        .upload-trigger-btn {
+            background: linear-gradient(135deg, var(--secondary) 0%, #b89328 100%);
+            color: var(--dark) !important;
+            font-weight: 700;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.25);
+        }
+        
+        .upload-trigger-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.35);
+        }
+        
+        /* Grid Display */
+        .portfolio-section {
+            padding: 4rem 0;
+            background: #f8fafc;
+            min-height: 500px;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        @media (max-width: 576px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .portfolio-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1), 0 8px 8px -5px rgba(0,0,0,0.05);
+        }
+        
+        .portfolio-img-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 66.66%; /* 3:2 Aspect Ratio */
+            overflow: hidden;
+            background-color: #cbd5e1;
+            cursor: pointer;
+        }
+        
+        .portfolio-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .portfolio-card:hover .portfolio-img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 60%, rgba(0,0,0,0) 100%);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            pointer-events: none;
+            z-index: 2;
+        }
+        
+        .portfolio-card:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .overlay-content {
+            color: var(--white);
+            transform: translateY(10px);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .portfolio-card:hover .overlay-content {
+            transform: translateY(0);
+        }
+        
+        .overlay-tag {
+            background: var(--secondary);
+            color: var(--dark);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .overlay-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .portfolio-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .portfolio-body h3 {
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .portfolio-desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+        
+        .portfolio-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 1rem;
+            margin-top: auto;
+        }
+        
+        .meta-category {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        .delete-btn {
+            background: none;
+            border: none;
+            color: #ef4444;
+            cursor: pointer;
+            padding: 0.4rem;
+            border-radius: 50%;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .delete-btn:hover {
+            background: rgba(239, 68, 68, 0.1);
+            transform: scale(1.1);
+        }
+        
+        /* Drag and drop zone */
+        .dropzone-container {
+            border: 2px dashed #cbd5e1;
+            border-radius: var(--radius-md);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            background: #f8fafc;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        .dropzone-container:hover, .dropzone-container.dragover {
+            border-color: var(--secondary);
+            background: rgba(212, 175, 55, 0.03);
+        }
+        
+        .dropzone-container i {
+            font-size: 2.5rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .dropzone-container.has-image i, .dropzone-container.has-image p {
+            display: none;
+        }
+        
+        .preview-img {
+            max-height: 180px;
+            max-width: 100%;
+            border-radius: var(--radius-sm);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            display: none;
+            margin: 0 auto;
+        }
+        
+        .dropzone-container.has-image .preview-img {
+            display: block;
+        }
+        
+        .remove-preview-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(239, 68, 68, 0.9);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            z-index: 10;
+        }
+        
+        .dropzone-container.has-image .remove-preview-btn {
+            display: flex;
+        }
+        
+        /* Lightbox overlay additions */
+        .lightbox-meta {
+            margin-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            grid-column: 1 / -1;
+            color: var(--text-light);
+        }
+        
+        .no-results i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Ceylon Canary Tours" style="height: 50px; width: auto;">
+                <span>Ceylon Canary Tours</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#packages">Destinations</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="index.html#contact" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Plan Your Trip</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <section class="gallery-header-section">
+        <div class="container">
+            <h1 class="gallery-title">Photography Chronicles</h1>
+            <p class="gallery-subtitle">
+                A premium visual anthology of Sri Lanka's soul-stirring landscapes, magnificent wildlife, and ancient heritages. Click any photo to enter high-resolution theater mode.
+            </p>
+        </div>
+    </section>
+
+    <!-- Controls Panel -->
+    <section class="gallery-controls">
+        <div class="container">
+            <div class="controls-grid">
+                <!-- Search -->
+                <div class="search-box">
+                    <i class="fas fa-magnifying-glass"></i>
+                    <input type="text" id="gallerySearch" placeholder="Search chronicles by title or keyword...">
+                </div>
+                
+                <!-- Category Tabs -->
+                <div class="filter-chips" id="filterChips">
+                    <span class="filter-chip active" data-category="All">All</span>
+                    <span class="filter-chip" data-category="Wildlife">Wildlife</span>
+                    <span class="filter-chip" data-category="Beaches">Beaches</span>
+                    <span class="filter-chip" data-category="Culture & Temples">Culture & Heritage</span>
+                    <span class="filter-chip" data-category="Scenic Landscapes">Scenic Landscapes</span>
+                </div>
+                
+                <!-- Upload Action -->
+                <button id="uploadTriggerBtn" class="upload-trigger-btn" onclick="openUploadModal()" style="display: none;">
+                    <i class="fas fa-circle-plus"></i> Upload Photo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Grid Section -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Populated dynamically by gallery.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Upload Modal -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content" style="max-width: 550px;">
+            <span class="close-modal" onclick="closeUploadModal()" style="color: var(--text-light); background: rgba(0,0,0,0.05);">&times;</span>
+            <div class="custom-builder-body" style="padding: 2.5rem 2rem 2rem;">
+                <h2 style="font-family: 'Playfair Display', serif; color: var(--primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.8rem; font-size: 2rem;">
+                    <i class="fas fa-camera" style="color: var(--secondary);"></i> Add to the Chronicles
+                </h2>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.9rem;">
+                    Upload your high-resolution travel photography, caption the story behind the shot, and add it to the portfolio.
+                </p>
+                
+                <form id="uploadPhotoForm" onsubmit="uploadPhoto(event)">
+                    <!-- Drag and Drop Dropzone -->
+                    <div class="dropzone-container" id="dropzone" onclick="document.getElementById('photoFile').click()">
+                        <button type="button" class="remove-preview-btn" onclick="removeSelectedFile(event)"><i class="fas fa-times"></i></button>
+                        <i class="fas fa-cloud-arrow-up" id="uploadIcon"></i>
+                        <p id="uploadPrompt" style="margin: 0; font-size: 0.95rem; font-weight: 500;">Drag & drop image here or <span style="color: var(--secondary); text-decoration: underline;">browse files</span></p>
+                        <img src="" class="preview-img" id="previewImg" alt="Preview">
+                        <input type="file" id="photoFile" accept="image/*" style="display: none;" onchange="handleFileSelect(event)" required>
+                    </div>
+                    
+                    <!-- Title Input -->
+                    <div class="form-group" style="margin-bottom: 1.2rem;">
+                        <label style="display: block; margin-bottom: 0.4rem; font-weight: 600; color: var(--primary); font-size: 0.9rem;">Photo Title</label>
+                        <input type="text" id="photoTitle" required placeholder="e.g. Whispers of the Lagoon at Dawn" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid #cbd5e1; font-family: inherit; font-size: 0.95rem;">
+                    </div>
+                    
+                    <!-- Category Select -->
+                    <div class="form-group" style="margin-bottom: 1.2rem;">
+                        <label style="display: block; margin-bottom: 0.4rem; font-weight: 600; color: var(--primary); font-size: 0.9rem;">Category</label>
+                        <select id="photoCategory" required style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid #cbd5e1; font-family: inherit; font-size: 0.95rem; background: var(--white);">
+                            <option value="Scenic Landscapes">Scenic Landscapes</option>
+                            <option value="Wildlife">Wildlife</option>
+                            <option value="Beaches">Beaches</option>
+                            <option value="Culture & Temples">Culture & Heritage</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Story/Description Input -->
+                    <div class="form-group" style="margin-bottom: 1.8rem;">
+                        <label style="display: block; margin-bottom: 0.4rem; font-weight: 600; color: var(--primary); font-size: 0.9rem;">The Story Behind the Shot <span style="font-weight: 400; color: var(--text-light); font-size: 0.8rem;">(Optional)</span></label>
+                        <textarea id="photoDesc" rows="3" placeholder="Briefly describe the camera details, context, location, or feelings captured..." style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid #cbd5e1; font-family: inherit; font-size: 0.95rem; resize: none;"></textarea>
+                    </div>
+                    
+                    <!-- Action Controls -->
+                    <div style="display: flex; gap: 1rem;">
+                        <button type="button" class="btn btn-outline" onclick="closeUploadModal()" style="flex: 1; border-color: #cbd5e1; color: var(--text); padding: 0.7rem 1.2rem; font-size: 0.95rem;">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="uploadSubmitBtn" style="flex: 2; padding: 0.7rem 1.2rem; font-size: 0.95rem;">Publish to Chronicles</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theater Mode Lightbox Overlay -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" style="color: var(--white); background: rgba(0,0,0,0.5); font-size: 2.5rem; top: 1.5rem; right: 2rem;">&times;</span>
+        <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+            <img class="lightbox-content" id="lightboxImg" style="max-height: 90vh; max-width: 95vw; object-fit: contain;">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem; display: inline-flex;">
+                        <img src="images/logo.jpg" alt="Ceylon Canary Tours">
+                        <span style="color: var(--white);">Ceylon Canary</span>
+                    </a>
+                    <p style="color: var(--text-light); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1.5rem;">
+                        Embark on a soul-stirring journey through Sri Lanka. We design boutique travel itineraries that connect you to the raw essence of our paradise.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">Our Story</a></li>
+                        <li><a href="gallery.html">Photography Chronicles</a></li>
+                        <li><a href="index.html#packages">Travel Modules</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> ceyloncanary@gmail.com</li>
+                        <li><i class="fas fa-phone-alt"></i>+94 76 969 3925</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ceylon Canary Tours. Designed for visual storytellers and travelers. <span id="adminPortalLink" style="cursor: pointer; opacity: 0.35; margin-left: 0.5rem; transition: var(--transition);" onclick="toggleAdminPortal()"><i class="fas fa-lock" id="adminPortalIcon"></i></span></p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Photographer Authentication Modal -->
+    <div id="adminAuthModal" class="modal">
+        <div class="modal-content" style="max-width: 400px;">
+            <span class="close-modal" onclick="closeAdminAuthModal()" style="color: var(--text-light); background: rgba(0,0,0,0.05);">&times;</span>
+            <div class="custom-builder-body" style="padding: 2.5rem 2rem 2rem; text-align: center;">
+                <h2 style="font-family: 'Playfair Display', serif; color: var(--primary); margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.8rem; font-size: 1.8rem;">
+                    <i class="fas fa-lock-open" style="color: var(--secondary);"></i> Photographer Access
+                </h2>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.85rem;">
+                    Enter the access pass code to enable photo publishing & deletion tools.
+                </p>
+                <form id="adminAuthForm" onsubmit="verifyAdminPass(event)">
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <input type="password" id="adminPassCode" required placeholder="Access Pass Code" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid #cbd5e1; font-family: inherit; font-size: 1rem; text-align: center; background: #f8fafc;">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem 1.2rem; font-size: 0.95rem;">Unlock Panel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;"></div>
+
+    <!-- JavaScript files -->
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>
